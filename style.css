@@ -1,0 +1,216 @@
+/* ================= ROOT ================= */
+:root {
+  --primary-color: #8B5A2B;
+  --secondary-color: #D2B48C;
+  --bg-color: #FAF8F5;
+  --text-dark: #3E2723;
+  --text-light: #F5F5F5;
+  --accent-color: #5C4033;
+  --radius: 10px;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  background: var(--bg-color) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-size: 1.6rem;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary-wooden {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.btn-outline-wooden {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.btn-outline-wooden:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* ================= PRODUCT CARD ================= */
+.card-wooden {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-wooden:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.card-img-wrapper {
+  height: 230px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* FIXES GREY GAP */
+  transition: 0.4s;
+}
+
+.card-wooden:hover img {
+  transform: scale(1.05);
+}
+
+/* BODY */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  padding: 15px;
+}
+
+/* TEXT */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 8px 0;
+  min-height: 40px; /* FIX ALIGNMENT */
+}
+
+/* PRICE + BUTTON */
+.card-bottom {
+  margin-top: auto;
+}
+
+.card-price {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* ================= CATEGORY ================= */
+.category-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card h5 {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* ================= CART ================= */
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+.nav-cart-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+/* ================= FLOATING CART ================= */
+.floating-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  transform: translateY(120%);
+  transition: 0.3s;
+}
+
+.floating-cart.show {
+  transform: translateY(0);
+}
+.hero-section {
+  background: 
+    linear-gradient(rgba(62,39,35,0.6), rgba(62,39,35,0.6)),
+    url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1920&q=80');
+  
+  background-size: cover;
+  background-position: center;
+
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+/* ================= FOOTER ================= */
+footer {
+  background: var(--text-dark);
+  color: var(--secondary-color);
+}
+
+footer a {
+  color: var(--secondary-color);
+}
+
+footer a:hover {
+  color: #fff;
+}
