@@ -5,11 +5,11 @@ let cart = JSON.parse(localStorage.getItem('woodenStoreCart')) || [];
 
 // Update Cart Count in Navbar
 function updateCartCount() {
-    const countSpan = document.getElementById('cart-count');
-    if (countSpan) {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        countSpan.textContent = totalItems;
-    }
+    const countSpans = document.querySelectorAll('.cart-badge');
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    countSpans.forEach(span => {
+        span.textContent = totalItems;
+    });
 }
 
 // Add Item to Cart
