@@ -103,6 +103,7 @@ h1, h2, h3, h4, h5 {
   border-radius: var(--radius) var(--radius) 0 0;
   overflow: hidden;
   padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .card-img-wrapper img {
@@ -194,6 +195,8 @@ h1, h2, h3, h4, h5 {
   object-fit: cover;
   border-radius: var(--radius);
   transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 15px;
 }
 
 .category-card:hover img {
