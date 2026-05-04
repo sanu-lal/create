@@ -142,7 +142,7 @@ function checkoutWhatsApp() {
     message += "Please confirm my order.";
 
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = "8592894615";
+    const phoneNumber = "918592894615";
 
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(waUrl, '_blank');
