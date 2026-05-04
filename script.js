@@ -44,7 +44,7 @@ function checkoutWhatsApp() {
 
   message += `%0A💰 Total: ₹${getCartTotal()}%0A`;
 
-  const phone = "919876543210";
+  const phone = "918592894615";
   window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 }
 
