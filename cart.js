@@ -120,7 +120,8 @@ function renderCart() {
 }
 
 // WhatsApp Checkout Logic
-function checkoutWhatsApp() {
+function checkoutWhatsApp() 
+{
     if (cart.length === 0) {
         alert("Your cart is empty!");
         return;
@@ -146,6 +147,11 @@ function checkoutWhatsApp() {
 
     const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(waUrl, '_blank');
+     // ✅ CLEAR CART AFTER ORDER
+    cart = [];
+    localStorage.removeItem('woodenStoreCart');
+    renderCart();
+    updateCartCount();
 }
 document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
@@ -177,7 +183,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
     }
 });
-cart = [];
-saveCart();
-renderCart();
-updateCartCount();
